@@ -1,0 +1,36 @@
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  border-style: none;
+  width: 95%;
+  padding-left: 3px;
+  padding-right: 3px;
+  font-size: 20px;
+}
+
+.page-title {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 56px;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input-container {
+  display: flex;
+  background-color: #ffffff;
+  width: 25%;
+  border-radius: 50px;
+  padding: 5px 10px;
+  margin: 5px;
+  align-items: center;
+  justify-content: center;
+}
