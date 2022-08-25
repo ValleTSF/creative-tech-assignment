@@ -10,8 +10,9 @@ export const CardContainer = styled.div`
   padding: 5%;
   border-radius: 20px;
   box-shadow: 0px 2px 5px #cfd0d1;
-  width: 40px;
-  height: 200px;
+  width: 200px;
+  height: 350px;
+  margin: 30px;
 
   & h3 {
     font-family: "Karla", sans-serif;
@@ -23,18 +24,11 @@ export const CardPicture = styled.img`
   border-radius: 50%;
 `;
 
-export const Background = styled.div`
-  z-index: 5;
-  background-color: #ebeb;
-  height: 50%;
-  width: 100%;
-`;
-
 export const ContactContainer = styled.div`
   z-index: 10;
   flex-direction: row;
   display: flex;
-  width: 40%;
+  width: 30%;
   margin-top: 20px;
   justify-content: space-between;
 `;

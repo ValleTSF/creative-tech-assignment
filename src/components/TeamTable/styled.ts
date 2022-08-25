@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const TableContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 `;

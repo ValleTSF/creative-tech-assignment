@@ -21,7 +21,6 @@ export default function TeamCard({
 }: TeamCardProps) {
   return (
     <S.CardContainer>
-      <S.Background />
       <S.CardName>
         {firstName} {lastName}
       </S.CardName>

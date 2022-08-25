@@ -29,7 +29,17 @@ export default function TeamPage() {
             <SearchIcon />
             <input className="input" type="text" name="name" />
           </div>
-          <ListIcon className="view-icon" />
+          {displayMode === "grid" ? (
+            <ListIcon
+              onClick={() => setDisplayMode("list")}
+              className="view-icon"
+            />
+          ) : (
+            <ThumbnailIcon
+              onClick={() => setDisplayMode("grid")}
+              className="view-icon"
+            />
+          )}
         </div>
         {teamList && (
           <TeamTable displayMode={displayMode} teamList={teamList} />
