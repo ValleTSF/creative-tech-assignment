@@ -3,7 +3,8 @@ import styled from "styled-components";
 export const BarContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-  background: linear-gradient(-30deg, #eeeeee 80%, #5a9c6c 80%);
+  background: ${(props) =>
+    `linear-gradient(-30deg, #eeeeee 80%, ${props.color} 80%)`};
   align-items: center;
   display: flex;
   border-radius: 20px;

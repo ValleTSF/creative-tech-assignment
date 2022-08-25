@@ -9,6 +9,7 @@ interface TeamCardProps {
   image: string;
   email: string;
   phone: string;
+  color: string;
 }
 
 export default function TeamCard({
@@ -18,9 +19,10 @@ export default function TeamCard({
   location,
   email,
   phone,
+  color,
 }: TeamCardProps): JSX.Element {
   return (
-    <S.CardContainer>
+    <S.CardContainer color={color}>
       <S.CardName>
         {firstName} {lastName}
       </S.CardName>

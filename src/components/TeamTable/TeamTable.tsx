@@ -1,11 +1,11 @@
 import React, { Suspense } from "react";
-import { TeamMember } from "../../types";
+import { MutatedTeamMember } from "../../types";
 import TeamBar from "../TeamBar";
 import * as S from "./styled";
 const TeamCard = React.lazy(() => import("../TeamCard"));
 
 interface TeamTableProps {
-  teamList: TeamMember[];
+  teamList: MutatedTeamMember[];
   displayMode: "grid" | "list";
 }
 
@@ -33,6 +33,7 @@ export default function TeamTable({
                 image={member.picture.large}
                 email={member.email}
                 phone={member.phone}
+                color={member.color}
               />
             </Suspense>
           );
@@ -43,6 +44,8 @@ export default function TeamTable({
   return (
     <S.CardTableContainer>
       {teamList.map((member) => {
+        console.log(member.color);
+
         return (
           <Suspense
             key={member.id.value + member.email}
@@ -55,6 +58,7 @@ export default function TeamTable({
               image={member.picture.large}
               email={member.email}
               phone={member.phone}
+              color={member.color}
             />
           </Suspense>
         );

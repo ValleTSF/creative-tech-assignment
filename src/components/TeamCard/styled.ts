@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const CardContainer = styled.div`
   @import url("https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap");
-  background: linear-gradient(-30deg, #eeeeee 50%, #5a9c6c 50%);
+  background: ${(props) =>
+    `linear-gradient(-30deg, #eeeeee 50%, ${props.color} 50%)`};
   align-items: center;
   justify-content: center;
   display: flex;

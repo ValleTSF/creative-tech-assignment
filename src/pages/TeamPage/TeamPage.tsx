@@ -5,19 +5,38 @@ import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
 import { ReactComponent as ThumbnailIcon } from "../../assets/icons/thumbnail-icon.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { TeamMember } from "../../types";
+import { MutatedTeamMember, TeamMember } from "../../types";
 import TeamTable from "../../components/TeamTable";
 import { searchList } from "../../utils";
 
+const teamColors = ["#E7CDAB", "#E3D5C9", "#A7B8A8"];
+
 export default function TeamPage(): JSX.Element {
-  const [teamList, setTeamList] = useState<TeamMember[]>();
-  const [filteredList, setFilteredList] = useState<TeamMember[]>();
+  const [teamList, setTeamList] = useState<MutatedTeamMember[]>();
+  const [filteredList, setFilteredList] = useState<MutatedTeamMember[]>();
   const [displayMode, setDisplayMode] = useState<"grid" | "list">("grid");
+
+  let counter = 0;
+
+  const getColor = () => {
+    const color = teamColors[counter];
+    if (counter === 2) {
+      counter = 0;
+    } else {
+      counter++;
+    }
+    return color;
+  };
 
   useEffect(() => {
     axios.get("https://randomuser.me/api/?results=50").then(({ data }) => {
-      const { results } = data;
-      setTeamList(results);
+      const { results }: { results: TeamMember[] } = data;
+
+      const mutatedResults = results.map((result) => {
+        return { ...result, color: getColor() };
+      });
+
+      setTeamList(mutatedResults);
     });
   }, []);
 

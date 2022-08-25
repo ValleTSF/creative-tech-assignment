@@ -9,6 +9,7 @@ interface TeamBarProps {
   image: string;
   email: string;
   phone: string;
+  color: string;
 }
 
 export default function TeamBar({
@@ -18,9 +19,10 @@ export default function TeamBar({
   image,
   email,
   phone,
+  color,
 }: TeamBarProps): JSX.Element {
   return (
-    <S.BarContainer>
+    <S.BarContainer color={color}>
       <S.ProfileContainer>
         <S.BarPicture width={100} height={100} src={image} alt="team member" />
         <S.InformationContainer>

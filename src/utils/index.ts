@@ -1,9 +1,9 @@
-import { TeamMember } from "../types";
+import { MutatedTeamMember } from "../types";
 
 export const searchList = (
   input: string,
-  teamList: TeamMember[]
-): TeamMember[] => {
+  teamList: MutatedTeamMember[]
+): MutatedTeamMember[] => {
   if (input === "") {
     return teamList;
   }

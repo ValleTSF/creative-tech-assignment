@@ -1,4 +1,4 @@
-export type TeamMember = {
+export interface TeamMember {
   gender: string;
   name: {
     title: string;
@@ -53,4 +53,8 @@ export type TeamMember = {
     thumbnail: string;
   };
   nat: string;
-};
+}
+
+export interface MutatedTeamMember extends TeamMember {
+  color: string;
+}
