@@ -20,12 +20,10 @@ export const CardContainer = styled.div`
 `;
 
 export const CardPicture = styled.img`
-  z-index: 10;
   border-radius: 50%;
 `;
 
 export const ContactContainer = styled.div`
-  z-index: 10;
   flex-direction: row;
   display: flex;
   width: 30%;
@@ -34,6 +32,5 @@ export const ContactContainer = styled.div`
 `;
 
 export const CardName = styled.h3`
-  z-index: 10;
   margin-bottom: 40px;
 `;

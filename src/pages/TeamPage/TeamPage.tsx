@@ -7,9 +7,11 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { TeamMember } from "../../types";
 import TeamTable from "../../components/TeamTable";
+import { searchList } from "../../utils";
 
-export default function TeamPage() {
+export default function TeamPage(): JSX.Element {
   const [teamList, setTeamList] = useState<TeamMember[]>();
+  const [filteredList, setFilteredList] = useState<TeamMember[]>();
   const [displayMode, setDisplayMode] = useState<"grid" | "list">("grid");
 
   useEffect(() => {
@@ -19,6 +21,12 @@ export default function TeamPage() {
     });
   }, []);
 
+  const onInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (teamList) {
+      setFilteredList(searchList(e.target.value, teamList));
+    }
+  };
+
   return (
     <div className="page-container">
       <h2 className="page-title">Meet the Team</h2>
@@ -27,7 +35,7 @@ export default function TeamPage() {
           <SortingIcon />
           <div className="input-container">
             <SearchIcon />
-            <input className="input" type="text" name="name" />
+            <input className="input" type="text" onChange={onInputChange} />
           </div>
           {displayMode === "grid" ? (
             <ListIcon
@@ -41,8 +49,8 @@ export default function TeamPage() {
             />
           )}
         </div>
-        {teamList && (
-          <TeamTable displayMode={displayMode} teamList={teamList} />
+        {filteredList && (
+          <TeamTable displayMode={displayMode} teamList={filteredList} />
         )}
       </div>
     </div>

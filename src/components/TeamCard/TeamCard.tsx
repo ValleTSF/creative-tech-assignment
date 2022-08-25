@@ -18,7 +18,7 @@ export default function TeamCard({
   location,
   email,
   phone,
-}: TeamCardProps) {
+}: TeamCardProps): JSX.Element {
   return (
     <S.CardContainer>
       <S.CardName>
