@@ -1,30 +1,32 @@
-.page-container {
+import styled from "styled-components";
+
+export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
+`;
 
-.page-title {
+export const PageTitle = styled.h2`
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 48px;
   line-height: 56px;
-}
+`;
 
-.input {
+export const SearchInput = styled.input`
   border-style: none;
   width: 95%;
   padding-left: 3px;
   padding-right: 3px;
   font-size: 20px;
-}
 
-.input:focus {
-  outline: none;
-}
+  &:focus {
+    outline: none;
+  }
+`;
 
-.input-container {
+export const InputContainer = styled.div`
   display: flex;
   background-color: #ffffff;
   width: 25%;
@@ -33,21 +35,18 @@
   margin: 10px;
   align-items: center;
   justify-content: center;
-}
+`;
 
-.content {
+export const ContentContainer = styled.div`
   width: 60%;
   display: flex;
   align-items: center;
   flex-direction: column;
-}
+`;
 
-.view-icon {
-}
-
-.utility-container {
+export const UtilityContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-}
+`;

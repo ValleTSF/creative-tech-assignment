@@ -1,4 +1,4 @@
-import "./TeamPage.css";
+import * as S from "./styled";
 import { ReactComponent as SearchIcon } from "../../assets/icons/search-icon.svg";
 import { ReactComponent as SortingIcon } from "../../assets/icons/sorting-icon.svg";
 import { ReactComponent as ListIcon } from "../../assets/icons/list-icon.svg";
@@ -50,15 +50,19 @@ export default function TeamPage(): JSX.Element {
   };
 
   return (
-    <div className="page-container">
-      <h2 className="page-title">Meet the Team</h2>
-      <div className="content">
-        <div className="utility-container">
+    <S.PageContainer>
+      <S.PageTitle>Meet the Team</S.PageTitle>
+      <S.ContentContainer>
+        <S.UtilityContainer>
           <SortingIcon onClick={onSortOrderClick} />
-          <div className="input-container">
+          <S.InputContainer>
             <SearchIcon />
-            <input className="input" type="text" onChange={onInputChange} />
-          </div>
+            <S.SearchInput
+              className="input"
+              type="text"
+              onChange={onInputChange}
+            />
+          </S.InputContainer>
           {displayMode === "grid" ? (
             <ListIcon
               onClick={() => setDisplayMode("list")}
@@ -70,11 +74,11 @@ export default function TeamPage(): JSX.Element {
               className="view-icon"
             />
           )}
-        </div>
+        </S.UtilityContainer>
         {filteredList && (
           <TeamTable displayMode={displayMode} teamList={filteredList} />
         )}
-      </div>
-    </div>
+      </S.ContentContainer>
+    </S.PageContainer>
   );
 }
