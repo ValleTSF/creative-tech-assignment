@@ -10,7 +10,7 @@ export const BarContainer = styled.div`
   border-radius: 20px;
   box-shadow: 0px 2px 5px #cfd0d1;
   justify-content: space-between;
-  width: 90%;
+  width: 95%;
   height: 120px;
   margin-top: 18px;
 

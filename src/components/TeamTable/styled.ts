@@ -3,6 +3,9 @@ import styled from "styled-components";
 export const CardTableContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const BarTableContainer = styled.div`

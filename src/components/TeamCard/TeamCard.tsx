@@ -27,7 +27,7 @@ export default function TeamCard({
         {firstName} {lastName}
       </S.CardName>
       <S.CardPicture width={100} height={100} src={image} alt="team member" />
-      <p>{location}</p>
+      <S.Location>{location}</S.Location>
       <S.ContactContainer>
         <MailIcon />
         <PhoneIcon />
