@@ -44,8 +44,6 @@ export default function TeamTable({
   return (
     <S.CardTableContainer>
       {teamList.map((member) => {
-        console.log(member.color);
-
         return (
           <Suspense
             key={member.id.value + member.email}

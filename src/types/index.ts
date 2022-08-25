@@ -58,3 +58,7 @@ export interface TeamMember {
 export interface MutatedTeamMember extends TeamMember {
   color: string;
 }
+
+export type SortOrder = "ascending" | "descending";
+
+export type DisplayMode = "list" | "grid";
