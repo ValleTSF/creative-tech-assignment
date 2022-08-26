@@ -29,8 +29,12 @@ export default function TeamCard({
       <S.CardPicture width={100} height={100} src={image} alt="team member" />
       <S.Location>{location}</S.Location>
       <S.ContactContainer>
-        <MailIcon />
-        <PhoneIcon />
+        <a href={`mailto:${email}`}>
+          <MailIcon />
+        </a>
+        <a href={`tel:${phone}`}>
+          <PhoneIcon />
+        </a>
       </S.ContactContainer>
     </S.CardContainer>
   );

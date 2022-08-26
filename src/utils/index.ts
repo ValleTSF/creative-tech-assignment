@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from "axios";
+import axios from "axios";
 import { MutatedTeamMember, SortOrder, TeamMember } from "../types";
 
 const teamColors = ["#E7CDAB", "#E3D5C9", "#A7B8A8"];
