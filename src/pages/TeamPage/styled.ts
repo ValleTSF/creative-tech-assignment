@@ -14,6 +14,7 @@ export const PageTitle = styled.h2`
   line-height: 56px;
   align-self: flex-start;
   margin-left: 27vw;
+
   @media (max-width: 768px) {
     font-size: 24px;
     margin-left: 5vw;
@@ -26,9 +27,11 @@ export const SearchInput = styled.input`
   padding-left: 3px;
   padding-right: 3px;
   font-size: 20px;
+
   @media (max-width: 1307px) {
     width: 75vw;
   }
+
   @media (max-width: 768px) {
     width: 65vw;
   }
@@ -47,9 +50,11 @@ export const InputContainer = styled.div`
   margin: 10px 20px;
   align-items: center;
   justify-content: center;
+
   @media (max-width: 1307px) {
     width: 75vw;
   }
+
   @media (max-width: 768px) {
     width: 65vw;
   }
