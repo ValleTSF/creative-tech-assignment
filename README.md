@@ -4,16 +4,16 @@ This application displays a list of team members and lets the user switch betwee
 
 ### `Installation`
 
-To install this application run npm install in the terminal.
+To install this application navigate to your preferred install location and run `git clone https://github.com/ValleTSF/creative-tech-assignment.git` after that run `npm install` in the terminal.
 
 ### `Run`
 
-To start the application run npm start in the terminal.
+To start the application run `npm start` in the terminal.
 
 ### `Build`
 
-To build the application run npm build in the terminal.
+To build the application run `npm build` in the terminal.
 
 ### `Test`
 
-To run the tests run npm test in the terminal.
+To run the tests run `npm test` in the terminal.
