@@ -37,12 +37,10 @@ export const BarPicture = styled.img`
 
 export const ContactContainer = styled.div`
   display: flex;
-  width: 50px;
+  width: 60px;
   justify-content: space-between;
   margin-right: 40px;
 `;
-
-export const BarName = styled.h3``;
 
 export const Location = styled.p`
   color: #292929;

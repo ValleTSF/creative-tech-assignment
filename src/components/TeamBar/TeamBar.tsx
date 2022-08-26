@@ -26,15 +26,19 @@ export default function TeamBar({
       <S.ProfileContainer>
         <S.BarPicture width={100} height={100} src={image} alt="team member" />
         <S.InformationContainer>
-          <S.BarName>
+          <h3>
             {firstName} {lastName}
-          </S.BarName>
+          </h3>
           <S.Location>{location}</S.Location>
         </S.InformationContainer>
       </S.ProfileContainer>
       <S.ContactContainer>
-        <MailIcon />
-        <PhoneIcon />
+        <a href={`mailto:${email}`}>
+          <MailIcon />
+        </a>
+        <a href={`tel:${phone}`}>
+          <PhoneIcon />
+        </a>
       </S.ContactContainer>
     </S.BarContainer>
   );

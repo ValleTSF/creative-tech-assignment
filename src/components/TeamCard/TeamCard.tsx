@@ -22,7 +22,7 @@ export default function TeamCard({
   color,
 }: TeamCardProps): JSX.Element {
   return (
-    <S.CardContainer color={color}>
+    <S.CardContainer data-testid="team-card" color={color}>
       <S.CardName>
         {firstName} {lastName}
       </S.CardName>

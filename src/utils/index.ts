@@ -1,4 +1,5 @@
-import { MutatedTeamMember, SortOrder } from "../types";
+import axios, { AxiosResponse } from "axios";
+import { MutatedTeamMember, SortOrder, TeamMember } from "../types";
 
 const teamColors = ["#E7CDAB", "#E3D5C9", "#A7B8A8"];
 
@@ -47,3 +48,15 @@ export const searchList = (
     );
   });
 };
+
+export const URL = "https://randomuser.me/api/?results=50";
+
+export const getTeamMembers = async (): Promise<TeamMember[]> =>
+  await axios
+    .get(URL)
+    .then(({ data }) => {
+      return data.results;
+    })
+    .catch((error) => {
+      console.log(error);
+    });

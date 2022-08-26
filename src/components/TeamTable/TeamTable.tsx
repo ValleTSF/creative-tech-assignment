@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import { MutatedTeamMember } from "../../types";
+import { MutatedTeamMember, TeamMember } from "../../types";
 import TeamBar from "../TeamBar";
 import * as S from "./styled";
 const TeamCard = React.lazy(() => import("../TeamCard"));
