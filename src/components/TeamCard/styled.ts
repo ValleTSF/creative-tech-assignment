@@ -17,8 +17,8 @@ export const CardContainer = styled.div`
   height: 350px;
   margin: 30px;
   @media (max-width: 768px) {
-    width: 150px;
-    height: 260px;
+    width: 130px;
+    height: 240px;
   }
 
   & h3 {

@@ -10,9 +10,17 @@ export const BarContainer = styled.div`
   border-radius: 20px;
   box-shadow: 0px 2px 5px #cfd0d1;
   justify-content: space-between;
-  width: 95%;
+  width: 42vw;
   height: 120px;
   margin-top: 18px;
+
+  @media (max-width: 1307px) {
+    width: 95vw;
+  }
+
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
 
   & h3 {
     font-family: "Karla", sans-serif;

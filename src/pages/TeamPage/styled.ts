@@ -26,9 +26,13 @@ export const SearchInput = styled.input`
   padding-left: 3px;
   padding-right: 3px;
   font-size: 20px;
+  @media (max-width: 1307px) {
+    width: 75vw;
+  }
   @media (max-width: 768px) {
     width: 65vw;
   }
+
   &:focus {
     outline: none;
   }
@@ -43,6 +47,9 @@ export const InputContainer = styled.div`
   margin: 10px 20px;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1307px) {
+    width: 75vw;
+  }
   @media (max-width: 768px) {
     width: 65vw;
   }
@@ -63,6 +70,8 @@ export const UtilityContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  align-self: flex-start;
+
   @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
