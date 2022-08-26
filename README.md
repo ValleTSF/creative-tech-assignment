@@ -4,7 +4,7 @@ This application displays a list of team members and lets the user switch betwee
 
 ### `Installation`
 
-To install this application navigate to your preferred install location and run `git clone https://github.com/ValleTSF/creative-tech-assignment.git` after that run `npm install` in the terminal.
+To install this application navigate to your preferred install location and run `git clone https://github.com/ValleTSF/creative-tech-assignment.git` in the terminal after that run `npm install`.
 
 ### `Run`
 
